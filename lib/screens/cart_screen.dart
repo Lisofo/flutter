@@ -42,6 +42,94 @@ class CartScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     CartItemSamples(),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Select All',
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w500),
+                          ),
+                          Checkbox(
+                              activeColor: Color(0xFFFD725A),
+                              value: true,
+                              onChanged: (value) {}),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Deliver Cost',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            '\$50.00',
+                            style: TextStyle(
+                                color: Colors.black.withOpacity(0.8),
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Total Payment:',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            '\$950.00',
+                            style: TextStyle(
+                                color: Colors.black.withOpacity(0.8),
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        padding:EdgeInsets.symmetric(vertical: 20, horizontal: 100),
+                        decoration: BoxDecoration(
+                            color: Color(0xFFFD725A),
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Text(
+                          'Checkout',
+                          style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 1,
+                              color: Colors.white.withOpacity(0.9)),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               )
